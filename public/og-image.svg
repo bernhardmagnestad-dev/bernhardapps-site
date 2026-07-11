@@ -1,0 +1,8 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#061826"/>
+  <rect x="96" y="88" width="1008" height="454" rx="32" fill="#0B2435" stroke="#1F6F78"/>
+  <text x="130" y="238" fill="#F7FAFC" font-family="Arial, sans-serif" font-size="74" font-weight="700">Bernhard Apps</text>
+  <text x="132" y="318" fill="#9BE7DD" font-family="Arial, sans-serif" font-size="42">Practical apps built around real needs.</text>
+  <rect x="132" y="385" width="226" height="58" rx="29" fill="#5EEAD4"/>
+  <text x="168" y="424" fill="#032225" font-family="Arial, sans-serif" font-size="24" font-weight="700">NLP Trainer</text>
+</svg>
