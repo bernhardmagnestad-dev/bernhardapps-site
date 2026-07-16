@@ -165,16 +165,11 @@
         background: rgba(16, 42, 61, 0.42);
         font-weight: 850;
       }
-      .development-app-mark {
-        display: grid;
-        place-items: center;
+      .development-app-icon {
         width: 72px;
-        aspect-ratio: 1;
+        height: 72px;
         border-radius: 22px;
-        color: #031d22;
-        background: linear-gradient(135deg, var(--teal), var(--blue));
-        font-size: 1.4rem;
-        font-weight: 950;
+        object-fit: cover;
       }
       .development-app-name {
         color: var(--text);
@@ -186,17 +181,12 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
-      .bombats-hero-mark {
-        display: grid;
-        place-items: center;
+      .bombats-hero-image {
+        display: block;
         width: min(100%, 420px);
-        aspect-ratio: 1;
+        height: auto;
         border: 1px solid rgba(125, 211, 252, 0.18);
         border-radius: 32px;
-        color: #031d22;
-        background: linear-gradient(135deg, var(--teal), var(--blue));
-        font-size: clamp(1.8rem, 5vw, 3.2rem);
-        font-weight: 950;
       }
       .nlp-logo-mark, .detail-hero-image {
         display: block;
@@ -287,7 +277,7 @@
           var appsActive = activeMode === "apps";
           var iconContent = appsActive
             ? '<a class="app-icon-link" href="/nlp-trainer"><img class="nlp-logo-mark" src="/nlp-trainer-icon.webp" alt="NLP Trainer" /></a>'
-            : '<a class="development-app-link" href="/bombats/testing"><span class="development-app-mark">BB</span><span class="development-app-name">Bombats</span><span class="development-app-status">Internal testing</span></a>';
+            : '<a class="development-app-link" href="/bombats/testing"><img class="development-app-icon" src="/bombats-icon.webp" alt="" /><span class="development-app-name">Bombats</span><span class="development-app-status">Internal testing</span></a>';
           var sectionTitle = appsActive ? "Development Principles" : "In Development";
 
           shell(
@@ -325,7 +315,7 @@
           shell(
             '<section class="section subpage-hero"><div><p class="eyebrow">Internal testing</p><h1>Bombats</h1><p>Bombats is currently in internal testing. Tester feedback will help shape the game before it is prepared for a wider release.</p><div class="hero-actions"><a class="button primary" href="' +
               testerEmailUrl +
-              '">Become a Tester</a><a class="button secondary" href="/support">Support</a></div></div><div class="app-detail-media"><div class="bombats-hero-mark" aria-hidden="true">Bombats</div></div></section>' +
+              '">Become a Tester</a><a class="button secondary" href="/support">Support</a></div></div><div class="app-detail-media"><img class="bombats-hero-image" src="/bombats-icon.webp" alt="Bombats app icon" /></div></section>' +
               '<section class="section"><div class="section-header"><h2>Internal testing</h2><p>Bombats is not listed as a public Google Play release yet. People who want to help test can contact Bernhard Apps and ask to join the tester program.</p></div><div class="feature-detail-grid"><article class="info-card"><h3>Internal testing</h3><p>This status will be updated as the app moves through testing.</p></article><article class="info-card"><h3>Tester feedback</h3><p>Feedback from internal testers is used before a wider release.</p></article><article class="info-card"><h3>Android game</h3><p>This status will be updated as the app moves through testing.</p></article><article class="info-card"><h3>In development</h3><p>This status will be updated as the app moves through testing.</p></article></div><div class="link-row"><a href="' +
               testerEmailUrl +
               '">Become a Tester</a><a href="/support">Support</a><a href="/contact">Contact</a></div></section>'

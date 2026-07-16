@@ -69,7 +69,11 @@ export function HomePage() {
               </a>
             ) : (
               <a className="development-app-link" href="/bombats/testing">
-                <span className="development-app-mark">BB</span>
+                <img
+                  className="development-app-icon"
+                  src="/bombats-icon.webp"
+                  alt=""
+                />
                 <span className="development-app-name">
                   {bombats?.name ?? "Bombats"}
                 </span>

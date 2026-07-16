@@ -26,10 +26,11 @@ export function BombatsTestingPage() {
           </div>
         </div>
         <div className="app-detail-media">
-          <div className="bombats-hero-mark" aria-hidden="true">
-            <Gamepad2 size={72} />
-            <span>Bombats</span>
-          </div>
+          <img
+            className="bombats-hero-image"
+            src="/bombats-icon.webp"
+            alt="Bombats app icon"
+          />
         </div>
       </section>
 
