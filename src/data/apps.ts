@@ -34,4 +34,22 @@ export const apps: AppInfo[] = [
     privacyUrl: "/nlp-trainer/privacy-policy",
     supportUrl: "/support",
   },
+  {
+    id: "bombats",
+    name: "Bombats",
+    status: "Internal testing",
+    summary:
+      "An Android game currently available for internal testing through Bernhard Apps.",
+    longDescription:
+      "Bombats is currently in internal testing. Tester feedback will help shape the game before it is prepared for a wider release.",
+    features: [
+      "Internal testing",
+      "Tester feedback",
+      "Android game",
+      "In development",
+    ],
+    playStoreUrl: "",
+    privacyUrl: "",
+    supportUrl: "/support",
+  },
 ];

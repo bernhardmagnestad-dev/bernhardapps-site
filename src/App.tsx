@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Layout } from "./components/Layout";
 import { BecomeTesterPage } from "./pages/BecomeTesterPage";
+import { BombatsTestingPage } from "./pages/BombatsTestingPage";
 import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
 import { NlpTrainerPage } from "./pages/NlpTrainerPage";
@@ -28,6 +29,9 @@ function renderPage(route: string) {
       return <NlpTrainerPage mode="development" />;
     case "/nlp-trainer/privacy-policy":
       return <NlpTrainerPrivacyPolicyPage />;
+    case "/bombats":
+    case "/bombats/testing":
+      return <BombatsTestingPage />;
     case "/become-a-tester":
       return <BecomeTesterPage />;
     case "/support":

@@ -2,6 +2,12 @@ node_modules/
 dist/
 outputs/
 work/
+.pnpm-store/
+pnpm-workspace.yaml
+OVERLEVERING_BERNHARD_APPS_NETTSIDE.md
+public/bernhard-apps-logo.png
+public/nlp-trainer-icon.png
+public/nlp-trainer-screenshot-*.png
 
 *.tsbuildinfo
 vite.config.js

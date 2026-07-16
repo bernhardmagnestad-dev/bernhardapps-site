@@ -149,11 +149,54 @@
         display: flex;
         justify-content: center;
       }
-      .app-icon-link {
+      .app-icon-link,
+      .development-app-link {
         display: grid;
         place-items: center;
         width: min(260px, 66vw);
         aspect-ratio: 1;
+        text-decoration: none;
+      }
+      .development-app-link {
+        gap: 8px;
+        border: 1px dashed rgba(125, 211, 252, 0.38);
+        border-radius: 24px;
+        color: var(--muted);
+        background: rgba(16, 42, 61, 0.42);
+        font-weight: 850;
+      }
+      .development-app-mark {
+        display: grid;
+        place-items: center;
+        width: 72px;
+        aspect-ratio: 1;
+        border-radius: 22px;
+        color: #031d22;
+        background: linear-gradient(135deg, var(--teal), var(--blue));
+        font-size: 1.4rem;
+        font-weight: 950;
+      }
+      .development-app-name {
+        color: var(--text);
+        font-size: 1.05rem;
+      }
+      .development-app-status {
+        color: var(--teal);
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .bombats-hero-mark {
+        display: grid;
+        place-items: center;
+        width: min(100%, 420px);
+        aspect-ratio: 1;
+        border: 1px solid rgba(125, 211, 252, 0.18);
+        border-radius: 32px;
+        color: #031d22;
+        background: linear-gradient(135deg, var(--teal), var(--blue));
+        font-size: clamp(1.8rem, 5vw, 3.2rem);
+        font-weight: 950;
       }
       .nlp-logo-mark, .detail-hero-image {
         display: block;
@@ -244,7 +287,7 @@
           var appsActive = activeMode === "apps";
           var iconContent = appsActive
             ? '<a class="app-icon-link" href="/nlp-trainer"><img class="nlp-logo-mark" src="/nlp-trainer-icon.webp" alt="NLP Trainer" /></a>'
-            : '<div class="development-example" aria-label="Example app placeholder">Example</div>';
+            : '<a class="development-app-link" href="/bombats/testing"><span class="development-app-mark">BB</span><span class="development-app-name">Bombats</span><span class="development-app-status">Internal testing</span></a>';
           var sectionTitle = appsActive ? "Development Principles" : "In Development";
 
           shell(
@@ -276,6 +319,19 @@
           );
         }
 
+        function bombatsTesting() {
+          var testerEmailUrl =
+            "mailto:contact@bernhardapps.com?subject=Apply%20for%20tester%20program%20Bombats";
+          shell(
+            '<section class="section subpage-hero"><div><p class="eyebrow">Internal testing</p><h1>Bombats</h1><p>Bombats is currently in internal testing. Tester feedback will help shape the game before it is prepared for a wider release.</p><div class="hero-actions"><a class="button primary" href="' +
+              testerEmailUrl +
+              '">Become a Tester</a><a class="button secondary" href="/support">Support</a></div></div><div class="app-detail-media"><div class="bombats-hero-mark" aria-hidden="true">Bombats</div></div></section>' +
+              '<section class="section"><div class="section-header"><h2>Internal testing</h2><p>Bombats is not listed as a public Google Play release yet. People who want to help test can contact Bernhard Apps and ask to join the tester program.</p></div><div class="feature-detail-grid"><article class="info-card"><h3>Internal testing</h3><p>This status will be updated as the app moves through testing.</p></article><article class="info-card"><h3>Tester feedback</h3><p>Feedback from internal testers is used before a wider release.</p></article><article class="info-card"><h3>Android game</h3><p>This status will be updated as the app moves through testing.</p></article><article class="info-card"><h3>In development</h3><p>This status will be updated as the app moves through testing.</p></article></div><div class="link-row"><a href="' +
+              testerEmailUrl +
+              '">Become a Tester</a><a href="/support">Support</a><a href="/contact">Contact</a></div></section>'
+          );
+        }
+
         function privacy() {
           shell(
             '<section class="section legal-page"><h1>Privacy Policy for NLP Trainer</h1><p>Last updated: July 10, 2026</p><p>NLP Trainer is designed as a local-first app for coaching administration, NLP training material, client notes, planning, invoices, credit notes, backups and accounting export.</p><p>NLP Trainer does not require a server login and does not upload client data, session notes, planner data, technique notes, invoice documents, credit notes, accounting exports, backups or settings to an app-owned server.</p><h2>Data Stored Locally</h2><p>The app may store personal data and business data that you enter, including client names, phone numbers, email addresses, addresses, client notes, session topics and session notes, selected techniques, payment status and payment dates, planned appointments and calendar events, class and participant information, invoice and credit note information, business details and app settings.</p><p>This data is stored locally on your device unless you choose to export, share or back it up.</p><h2>Backups and Exports</h2><p>Android system backup is disabled for the app database.</p><p>Manual backups, invoice PDF archives, credit note PDF archives, accounting CSV files, emails, SMS messages, calendar files and exported documents are only created when you choose to create, save, export or share them.</p><p>Backup files and exported invoice or credit note archives may contain client information, session notes, planner entries, classes, participants, invoice settings, invoice documents, credit note documents, business details and local app settings.</p><p>These exported files are not encrypted by NLP Trainer. You are responsible for storing them securely.</p><h2>Sharing With Other Apps</h2><p>When you export, restore, open or share data, the destination app or provider you choose may process that data under its own privacy practices. This may include email apps, SMS apps, PDF viewers, cloud storage providers, calendar apps, accounting software, file pickers and local storage providers.</p><p>NLP Trainer does not control how those third-party apps or services process the data after you choose to share or export it.</p><h2>User Responsibility</h2><p>You are responsible for protecting client information, obtaining any required consent, using a valid legal basis for processing personal data, limiting access to exported files, and complying with privacy, confidentiality, retention, accounting record, tax record and deletion rules that apply to your practice or business.</p><h2>Deleting Data</h2><p>If you no longer want app data on your device, you can delete the relevant clients, sessions, planner entries, classes, events, invoice files, credit note files and backups, or uninstall the app.</p><p>Files already exported to other apps, cloud providers, email accounts, accounting systems or local folders must be managed separately in those services.</p><h2>Children&apos;s Privacy</h2><p>NLP Trainer is intended for professional or business use. The app is not directed at children.</p><h2>Contact</h2><p>For privacy questions or feedback, contact: <a href="mailto:contact@bernhardapps.com">contact@bernhardapps.com</a></p></section>'
@@ -298,6 +354,7 @@
           window.scrollTo(0, 0);
           if (route === "/nlp-trainer") return nlpTrainer();
           if (route === "/nlp-trainer/privacy-policy") return privacy();
+          if (route === "/bombats" || route === "/bombats/testing") return bombatsTesting();
           if (route === "/support") return supportPage();
           if (route === "/contact") return simplePage("Contact Bernhard Apps", "For privacy questions, tester interest or general inquiries, contact Bernhard Apps directly.");
           if (route === "/privacy-policy") return simplePage("Privacy Policy", "Bernhard Apps aims to build privacy-conscious applications that only ask for information needed to provide their intended functionality.");

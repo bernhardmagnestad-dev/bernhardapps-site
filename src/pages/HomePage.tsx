@@ -2,6 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { AppVisual } from "../components/AppVisual";
 import { SectionHeader } from "../components/SectionHeader";
+import { apps } from "../data/apps";
 
 const principleCards = [
   ["Practical", "Every app should solve a real and identifiable problem."],
@@ -20,6 +21,7 @@ export function HomePage() {
   const [activeHeroToggle, setActiveHeroToggle] = useState<"apps" | "development">(
     "apps"
   );
+  const bombats = apps.find((app) => app.id === "bombats");
 
   const handleHeroToggle = (target: "apps" | "development") => {
     setActiveHeroToggle(target);
@@ -66,12 +68,15 @@ export function HomePage() {
                 />
               </a>
             ) : (
-              <div
-                className="development-example"
-                aria-label="Example app placeholder"
-              >
-                Example
-              </div>
+              <a className="development-app-link" href="/bombats/testing">
+                <span className="development-app-mark">BB</span>
+                <span className="development-app-name">
+                  {bombats?.name ?? "Bombats"}
+                </span>
+                <span className="development-app-status">
+                  {bombats?.status ?? "Internal testing"}
+                </span>
+              </a>
             )}
           </div>
         </section>
