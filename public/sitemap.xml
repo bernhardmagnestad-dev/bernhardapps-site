@@ -17,6 +17,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bernhardapps.com/bombats/privacy-policy</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bernhardapps.com/support</loc>
     <priority>0.6</priority>
   </url>

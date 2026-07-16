@@ -55,6 +55,7 @@ export function BombatsTestingPage() {
         </div>
         <div className="link-row">
           <a href={testerEmailUrl}>Become a Tester</a>
+          <a href={app.privacyUrl}>Bomb Bats Privacy Policy</a>
           <a href="/support">Support</a>
           <a href="/contact">Contact</a>
         </div>

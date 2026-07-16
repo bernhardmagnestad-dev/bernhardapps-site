@@ -49,7 +49,7 @@ export const apps: AppInfo[] = [
       "In development",
     ],
     playStoreUrl: "",
-    privacyUrl: "",
+    privacyUrl: "/bombats/privacy-policy",
     supportUrl: "/support",
   },
 ];

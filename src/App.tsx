@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Layout } from "./components/Layout";
 import { BecomeTesterPage } from "./pages/BecomeTesterPage";
+import { BombatsPrivacyPolicyPage } from "./pages/BombatsPrivacyPolicyPage";
 import { BombatsTestingPage } from "./pages/BombatsTestingPage";
 import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
@@ -32,6 +33,8 @@ function renderPage(route: string) {
     case "/bombats":
     case "/bombats/testing":
       return <BombatsTestingPage />;
+    case "/bombats/privacy-policy":
+      return <BombatsPrivacyPolicyPage />;
     case "/become-a-tester":
       return <BecomeTesterPage />;
     case "/support":
