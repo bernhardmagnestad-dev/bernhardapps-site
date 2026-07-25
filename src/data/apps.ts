@@ -74,6 +74,6 @@ export const apps: AppInfo[] = [
     privacyUrl: "/norsk-kryssord/privacy-policy",
     supportUrl: "/support",
     testingUrl: "/norsk-kryssord/testing",
-    iconUrl: "/norsk-kryssord-preview.jpg",
+    iconUrl: "/norsk-kryssord-icon.webp",
   },
 ];

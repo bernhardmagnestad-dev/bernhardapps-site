@@ -27,9 +27,9 @@ export function NorskKryssordTestingPage() {
         </div>
         <div className="app-detail-media">
           <img
-            className="detail-hero-image"
-            src="/norsk-kryssord-preview.jpg"
-            alt="Norsk Kryssord puzzle preview"
+            className="bombats-hero-image"
+            src="/norsk-kryssord-icon.webp"
+            alt="Norsk Kryssord app icon"
           />
         </div>
       </section>
