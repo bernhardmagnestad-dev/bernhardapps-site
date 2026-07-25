@@ -8,6 +8,8 @@ export type AppInfo = {
   playStoreUrl: string;
   privacyUrl: string;
   supportUrl: string;
+  testingUrl?: string;
+  iconUrl?: string;
 };
 
 export const apps: AppInfo[] = [
@@ -51,5 +53,27 @@ export const apps: AppInfo[] = [
     playStoreUrl: "",
     privacyUrl: "/bombats/privacy-policy",
     supportUrl: "/support",
+    testingUrl: "/bombats/testing",
+    iconUrl: "/bombats-icon.webp",
+  },
+  {
+    id: "norsk-kryssord",
+    name: "Norsk Kryssord",
+    status: "Open testing",
+    summary:
+      "A Norwegian crossword puzzle app currently available for open testing.",
+    longDescription:
+      "Norsk Kryssord is currently in open testing. Tester feedback is used to improve puzzle flow, readability and the overall game experience before a wider public release.",
+    features: [
+      "Open testing",
+      "Norwegian crossword puzzles",
+      "Local progress",
+      "Built with feedback",
+    ],
+    playStoreUrl: "",
+    privacyUrl: "/norsk-kryssord/privacy-policy",
+    supportUrl: "/support",
+    testingUrl: "/norsk-kryssord/testing",
+    iconUrl: "/norsk-kryssord-preview.jpg",
   },
 ];

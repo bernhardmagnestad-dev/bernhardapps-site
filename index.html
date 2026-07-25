@@ -277,7 +277,7 @@
           var appsActive = activeMode === "apps";
           var iconContent = appsActive
             ? '<a class="app-icon-link" href="/nlp-trainer"><img class="nlp-logo-mark" src="/nlp-trainer-icon.webp" alt="NLP Trainer" /></a>'
-            : '<a class="development-app-link" href="/bombats/testing"><img class="development-app-icon" src="/bombats-icon.webp" alt="" /><span class="development-app-name">Bombats</span><span class="development-app-status">Internal testing</span></a>';
+            : '<a class="development-app-link" href="/bombats/testing"><img class="development-app-icon" src="/bombats-icon.webp" alt="" /><span class="development-app-name">Bombats</span><span class="development-app-status">Internal testing</span></a><a class="development-app-link" href="/norsk-kryssord/testing"><img class="development-app-icon" src="/norsk-kryssord-preview.jpg" alt="" /><span class="development-app-name">Norsk Kryssord</span><span class="development-app-status">Open testing</span></a>';
           var sectionTitle = appsActive ? "Development Principles" : "In Development";
 
           shell(
@@ -328,6 +328,19 @@
           );
         }
 
+        function norskKryssordTesting() {
+          var testerEmailUrl =
+            "mailto:contact@bernhardapps.com?subject=Apply%20for%20tester%20program%20Norsk%20Kryssord";
+          shell(
+            '<section class="section subpage-hero"><div><p class="eyebrow">Open testing</p><h1>Norsk Kryssord</h1><p>Norsk Kryssord is currently in open testing. Tester feedback is used to improve puzzle flow, readability and the overall game experience before a wider public release.</p><div class="hero-actions"><a class="button primary" href="' +
+              testerEmailUrl +
+              '">Become a Tester</a><a class="button secondary" href="/support">Support</a></div></div><div class="app-detail-media"><img class="detail-hero-image" src="/norsk-kryssord-preview.jpg" alt="Norsk Kryssord puzzle preview" /></div></section>' +
+              '<section class="section"><div class="section-header"><h2>Open testing</h2><p>Norsk Kryssord is not listed as a final public release yet. The app is available for open testing so feedback can be used before production.</p></div><div class="feature-detail-grid"><article class="info-card"><h3>Open testing</h3><p>This status will be updated as the app moves through testing.</p></article><article class="info-card"><h3>Norwegian crossword puzzles</h3><p>This status will be updated as the app moves through testing.</p></article><article class="info-card"><h3>Local progress</h3><p>Puzzle progress is stored locally on the device.</p></article><article class="info-card"><h3>Built with feedback</h3><p>This status will be updated as the app moves through testing.</p></article></div><div class="link-row"><a href="' +
+              testerEmailUrl +
+              '">Become a Tester</a><a href="/norsk-kryssord/privacy-policy">Norsk Kryssord Privacy Policy</a><a href="/support">Support</a><a href="/contact">Contact</a></div></section>'
+          );
+        }
+
         function norskKryssordPrivacy() {
           shell(
             '<section class="section legal-page"><h1>Privacy Policy for Norsk Kryssord</h1><p>Last updated: 25 July 2026</p><p>Norsk Kryssord is a crossword puzzle Android app developed by Bernhard Apps. This Privacy Policy explains how the app handles information.</p><h2>Summary</h2><p>Norsk Kryssord does not collect, transmit, sell, or share personal data.</p><p>The app is designed to run locally on your device. It does not require an account, does not use ads, does not include in-app purchases, and does not use analytics or tracking SDKs.</p><h2>Information stored on your device</h2><p>Norsk Kryssord may store limited puzzle progress locally on your device, including selected puzzle difficulty and position, letters entered into crossword puzzles, completed puzzle status, and local game progress.</p><p>This information stays on your device and is not sent to the developer or to a server.</p><h2>Feedback</h2><p>Norsk Kryssord includes an optional feedback feature. If you choose to send feedback, the app opens Android&apos;s share sheet with a prepared text message so you can choose which app to use.</p><p>The feedback action is user-initiated. Norsk Kryssord does not automatically send feedback, does not choose the recipient, and does not receive information unless you manually send it.</p><p>If you send feedback through another app or service, that app or service may process the message under its own privacy practices.</p><h2>Permissions</h2><p>Norsk Kryssord does not request sensitive Android permissions such as location, camera, microphone, contacts, phone, SMS, storage access, or internet access.</p><h2>Children</h2><p>Norsk Kryssord is a crossword puzzle app. It does not knowingly collect personal information from children or any other users.</p><h2>Third-party services</h2><p>Norsk Kryssord does not currently use third-party analytics, advertising, crash reporting, payment, or social login services.</p><p>If this changes in a future version, this Privacy Policy and the Google Play Data safety section will be updated before release.</p><h2>Data retention and deletion</h2><p>Because Norsk Kryssord does not collect personal data, there is no personal data stored by the developer to delete.</p><p>Local puzzle progress can be removed by clearing the app&apos;s storage in Android settings or uninstalling the app.</p><h2>Changes to this policy</h2><p>This Privacy Policy may be updated when the app changes. The latest version will be made available at the Privacy Policy URL listed on Google Play.</p><h2>Contact</h2><p>If you have questions about this Privacy Policy, contact: <a href="mailto:contact@bernhardapps.com">contact@bernhardapps.com</a></p></section>'
@@ -358,6 +371,7 @@
           if (route === "/nlp-trainer/privacy-policy") return privacy();
           if (route === "/bombats" || route === "/bombats/testing") return bombatsTesting();
           if (route === "/bombats/privacy-policy") return bombatsPrivacy();
+          if (route === "/norsk-kryssord" || route === "/norsk-kryssord/testing" || route === "/kryssord" || route === "/kryssord/testing") return norskKryssordTesting();
           if (route === "/norsk-kryssord/privacy-policy" || route === "/kryssord/privacy-policy") return norskKryssordPrivacy();
           if (route === "/support") return supportPage();
           if (route === "/contact") return simplePage("Contact Bernhard Apps", "For privacy questions, tester interest or general inquiries, contact Bernhard Apps directly.");

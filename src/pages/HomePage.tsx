@@ -21,7 +21,9 @@ export function HomePage() {
   const [activeHeroToggle, setActiveHeroToggle] = useState<"apps" | "development">(
     "apps"
   );
-  const bombats = apps.find((app) => app.id === "bombats");
+  const developmentApps = apps.filter(
+    (app) => app.status !== "Available on Google Play"
+  );
 
   const handleHeroToggle = (target: "apps" | "development") => {
     setActiveHeroToggle(target);
@@ -68,19 +70,21 @@ export function HomePage() {
                 />
               </a>
             ) : (
-              <a className="development-app-link" href="/bombats/testing">
-                <img
-                  className="development-app-icon"
-                  src="/bombats-icon.webp"
-                  alt=""
-                />
-                <span className="development-app-name">
-                  {bombats?.name ?? "Bombats"}
-                </span>
-                <span className="development-app-status">
-                  {bombats?.status ?? "Internal testing"}
-                </span>
-              </a>
+              developmentApps.map((app) => (
+                <a
+                  className="development-app-link"
+                  href={app.testingUrl ?? app.privacyUrl}
+                  key={app.id}
+                >
+                  <img
+                    className="development-app-icon"
+                    src={app.iconUrl ?? "/bernhard-apps-logo.webp"}
+                    alt=""
+                  />
+                  <span className="development-app-name">{app.name}</span>
+                  <span className="development-app-status">{app.status}</span>
+                </a>
+              ))
             )}
           </div>
         </section>

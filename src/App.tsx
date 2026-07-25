@@ -8,6 +8,7 @@ import { HomePage } from "./pages/HomePage";
 import { NlpTrainerPage } from "./pages/NlpTrainerPage";
 import { NlpTrainerPrivacyPolicyPage } from "./pages/NlpTrainerPrivacyPolicyPage";
 import { NorskKryssordPrivacyPolicyPage } from "./pages/NorskKryssordPrivacyPolicyPage";
+import { NorskKryssordTestingPage } from "./pages/NorskKryssordTestingPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { SupportPage } from "./pages/SupportPage";
 import { TermsPage } from "./pages/TermsPage";
@@ -39,6 +40,11 @@ function renderPage(route: string) {
     case "/norsk-kryssord/privacy-policy":
     case "/kryssord/privacy-policy":
       return <NorskKryssordPrivacyPolicyPage />;
+    case "/norsk-kryssord":
+    case "/norsk-kryssord/testing":
+    case "/kryssord":
+    case "/kryssord/testing":
+      return <NorskKryssordTestingPage />;
     case "/become-a-tester":
       return <BecomeTesterPage />;
     case "/support":
