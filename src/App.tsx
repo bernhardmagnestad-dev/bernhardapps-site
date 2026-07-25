@@ -7,6 +7,7 @@ import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
 import { NlpTrainerPage } from "./pages/NlpTrainerPage";
 import { NlpTrainerPrivacyPolicyPage } from "./pages/NlpTrainerPrivacyPolicyPage";
+import { NorskKryssordPrivacyPolicyPage } from "./pages/NorskKryssordPrivacyPolicyPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { SupportPage } from "./pages/SupportPage";
 import { TermsPage } from "./pages/TermsPage";
@@ -35,6 +36,9 @@ function renderPage(route: string) {
       return <BombatsTestingPage />;
     case "/bombats/privacy-policy":
       return <BombatsPrivacyPolicyPage />;
+    case "/norsk-kryssord/privacy-policy":
+    case "/kryssord/privacy-policy":
+      return <NorskKryssordPrivacyPolicyPage />;
     case "/become-a-tester":
       return <BecomeTesterPage />;
     case "/support":
