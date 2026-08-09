@@ -2,7 +2,7 @@ export function NlpTrainerPrivacyPolicyPage() {
   return (
     <section className="section legal-page">
       <h1>Privacy Policy for NLP Trainer</h1>
-      <p>Last updated: July 10, 2026</p>
+      <p>Last updated: August 9, 2026</p>
 
       <p>
         NLP Trainer is designed as a local-first app for coaching
@@ -39,6 +39,25 @@ export function NlpTrainerPrivacyPolicyPage() {
       <p>
         This data is stored locally on your device unless you choose to export,
         share or back it up.
+      </p>
+
+      <h2>Subscriptions and Google Play Billing</h2>
+      <p>
+        NLP Trainer may offer optional Premium subscriptions through Google Play.
+        Subscription purchases, renewals, cancellations and payment processing
+        are handled by Google Play under Google's own terms and privacy practices.
+      </p>
+      <p>
+        NLP Trainer does not receive or store your payment card or other payment
+        method details. The app may ask Google Play for the current purchase or
+        subscription status associated with the Google Play account on the device
+        in order to determine whether Premium features should be available and to
+        restore an existing purchase.
+      </p>
+      <p>
+        No client records, session notes, planner data, technique notes, invoice
+        documents, backups or other locally stored coaching data are sent to
+        Google Play as part of this subscription check.
       </p>
 
       <h2>Backups and Exports</h2>
@@ -103,6 +122,10 @@ export function NlpTrainerPrivacyPolicyPage() {
         Files already exported to other apps, cloud providers, email accounts,
         accounting systems or local folders must be managed separately in those
         services.
+      </p>
+      <p>
+        Uninstalling NLP Trainer does not cancel a Google Play subscription.
+        Subscriptions must be managed or cancelled through Google Play.
       </p>
 
       <h2>Children's Privacy</h2>
