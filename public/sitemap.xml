@@ -13,8 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bernhardapps.com/bombats</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bernhardapps.com/bombats/testing</loc>
-    <priority>0.7</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://bernhardapps.com/bombats/privacy-policy</loc>

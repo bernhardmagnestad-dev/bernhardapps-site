@@ -2,6 +2,7 @@ export type AppInfo = {
   id: string;
   name: string;
   status: string;
+  category: "published" | "development";
   summary: string;
   longDescription: string;
   features: string[];
@@ -17,6 +18,7 @@ export const apps: AppInfo[] = [
     id: "nlp-trainer",
     name: "NLP Trainer",
     status: "Available on Google Play",
+    category: "published",
     summary:
       "A practical app for coaches, NLP practitioners and life coaches who want a simple way to keep track of clients, sessions, notes, planning and NLP techniques.",
     longDescription:
@@ -39,16 +41,17 @@ export const apps: AppInfo[] = [
   {
     id: "bombats",
     name: "Bombats",
-    status: "Internal testing",
+    status: "Available",
+    category: "published",
     summary:
-      "An Android game currently available for internal testing through Bernhard Apps.",
+      "A casual Android game from Bernhard Apps.",
     longDescription:
-      "Bombats is currently in internal testing. Tester feedback will help shape the game before it is prepared for a wider release.",
+      "Bombats is a casual Android game from Bernhard Apps. The game is built for quick play sessions, simple controls and arcade-style challenge.",
     features: [
-      "Internal testing",
-      "Tester feedback",
-      "Android game",
-      "In development",
+      "Casual Android game",
+      "Quick play sessions",
+      "Arcade challenge",
+      "Built with feedback",
     ],
     playStoreUrl: "",
     privacyUrl: "/bombats/privacy-policy",
@@ -60,6 +63,7 @@ export const apps: AppInfo[] = [
     id: "norsk-kryssord",
     name: "Norsk Kryssord",
     status: "Open testing",
+    category: "development",
     summary:
       "A Norwegian crossword puzzle app currently available for open testing.",
     longDescription:

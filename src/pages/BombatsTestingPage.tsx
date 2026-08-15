@@ -17,9 +17,18 @@ export function BombatsTestingPage() {
           <h1>{app.name}</h1>
           <p>{app.longDescription}</p>
           <div className="hero-actions">
-            <a className="button primary" href={testerEmailUrl}>
-              Become a Tester <ExternalLink size={18} aria-hidden="true" />
-            </a>
+            {app.playStoreUrl ? (
+              <a
+                className="button primary"
+                href={app.playStoreUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Google Play <ExternalLink size={18} aria-hidden="true" />
+              </a>
+            ) : (
+              <ButtonLink to={app.privacyUrl}>Privacy Policy</ButtonLink>
+            )}
             <ButtonLink to="/support" variant="secondary">
               Support
             </ButtonLink>
@@ -35,10 +44,9 @@ export function BombatsTestingPage() {
       </section>
 
       <section className="section">
-        <SectionHeader title="Internal testing">
-          Bombats is not listed as a public Google Play release yet. People who
-          want to help test can contact Bernhard Apps and ask to join the tester
-          program.
+        <SectionHeader title="Bombats">
+          Bombats is part of the Bernhard Apps catalog. The app status and
+          privacy details are kept updated as features change.
         </SectionHeader>
         <div className="feature-detail-grid">
           {app.features.map((feature) => (
@@ -46,15 +54,16 @@ export function BombatsTestingPage() {
               <Gamepad2 size={18} aria-hidden="true" />
               <h3>{feature}</h3>
               <p>
-                {feature === "Tester feedback"
-                  ? "Feedback from internal testers is used before a wider release."
-                  : "This status will be updated as the app moves through testing."}
+                {feature === "Built with feedback"
+                  ? "Player feedback is used to improve the game over time."
+                  : "A practical part of the Bombats game experience."}
               </p>
             </article>
           ))}
         </div>
         <div className="link-row">
-          <a href={testerEmailUrl}>Become a Tester</a>
+          {app.playStoreUrl ? <a href={app.playStoreUrl}>Google Play</a> : null}
+          <a href={testerEmailUrl}>Send feedback</a>
           <a href={app.privacyUrl}>Bomb Bats Privacy Policy</a>
           <a href="/support">Support</a>
           <a href="/contact">Contact</a>

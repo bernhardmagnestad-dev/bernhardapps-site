@@ -21,9 +21,8 @@ export function HomePage() {
   const [activeHeroToggle, setActiveHeroToggle] = useState<"apps" | "development">(
     "apps"
   );
-  const developmentApps = apps.filter(
-    (app) => app.status !== "Available on Google Play"
-  );
+  const publishedApps = apps.filter((app) => app.category === "published");
+  const developmentApps = apps.filter((app) => app.category === "development");
 
   const handleHeroToggle = (target: "apps" | "development") => {
     setActiveHeroToggle(target);
@@ -62,13 +61,21 @@ export function HomePage() {
         <section className="section app-logo-section" aria-label="Our Apps">
           <div className="app-icon-grid">
             {activeHeroToggle === "apps" ? (
-              <a className="app-icon-link" href="/nlp-trainer">
-                <img
-                  className="nlp-logo-mark"
-                  src="/nlp-trainer-icon.webp"
-                  alt="NLP Trainer"
-                />
-              </a>
+              publishedApps.map((app) => (
+                <a
+                  className="development-app-link"
+                  href={app.id === "nlp-trainer" ? "/nlp-trainer" : `/${app.id}`}
+                  key={app.id}
+                >
+                  <img
+                    className="development-app-icon"
+                    src={app.iconUrl ?? "/nlp-trainer-icon.webp"}
+                    alt=""
+                  />
+                  <span className="development-app-name">{app.name}</span>
+                  <span className="development-app-status">{app.status}</span>
+                </a>
+              ))
             ) : (
               developmentApps.map((app) => (
                 <a

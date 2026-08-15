@@ -1,8 +1,8 @@
 export function BombatsPrivacyPolicyPage() {
   return (
-    <section className="section legal-page">
-      <h1>Privacy Policy for Bomb Bats</h1>
-      <p>Last updated: 11 July 2026</p>
+      <section className="section legal-page">
+        <h1>Privacy Policy for Bomb Bats</h1>
+      <p>Last updated: 15 August 2026</p>
 
       <p>
         Bomb Bats is a casual Android game developed by Bernhard Apps. This
@@ -10,11 +10,13 @@ export function BombatsPrivacyPolicyPage() {
       </p>
 
       <h2>Summary</h2>
-      <p>Bomb Bats does not collect, transmit, sell, or share personal data.</p>
+      <p>Bernhard Apps does not sell personal data.</p>
       <p>
-        The game is designed to run locally on your device. It does not require
-        an account, does not use ads, does not include in-app purchases, and
-        does not use analytics or tracking SDKs.
+        The game does not require an account and does not include in-app
+        purchases. Bomb Bats may show ads through third-party advertising
+        services, such as Google AdMob. Those advertising services may process
+        limited data to deliver ads, measure ad performance, prevent fraud and
+        comply with legal requirements.
       </p>
 
       <h2>Information stored on your device</h2>
@@ -30,7 +32,27 @@ export function BombatsPrivacyPolicyPage() {
       </ul>
       <p>
         This information stays on your device and is not sent to the developer
-        or to a server.
+        or to a Bernhard Apps server.
+      </p>
+
+      <h2>Advertising</h2>
+      <p>
+        Bomb Bats may use third-party advertising services to show ads in the
+        app. These services may collect or receive information such as device
+        identifiers, advertising identifiers, IP address, approximate location,
+        app activity related to ad views or clicks, device information and
+        diagnostics.
+      </p>
+      <p>
+        This information is used by the advertising provider for purposes such
+        as ad delivery, frequency capping, ad measurement, fraud prevention,
+        security and service improvement. The advertising provider processes
+        this information under its own privacy policy.
+      </p>
+      <p>
+        You can manage ad personalization and reset or limit your advertising
+        identifier in your Android or Google settings, where supported by your
+        device.
       </p>
 
       <h2>Score sharing</h2>
@@ -64,22 +86,25 @@ export function BombatsPrivacyPolicyPage() {
 
       <h2>Third-party services</h2>
       <p>
-        Bomb Bats does not currently use third-party analytics, advertising,
-        crash reporting, payment, or social login services.
+        Bomb Bats may use third-party advertising services, including Google
+        AdMob or related Google advertising services. The app does not currently
+        use third-party payment or social login services.
       </p>
       <p>
-        If this changes in a future version, this Privacy Policy and the Google
-        Play Data safety section will be updated before release.
+        If additional third-party services are added in a future version, this
+        Privacy Policy and the Google Play Data safety section will be updated
+        before release.
       </p>
 
       <h2>Data retention and deletion</h2>
       <p>
-        Because Bomb Bats does not collect personal data, there is no personal
-        data stored by the developer to delete.
+        Bernhard Apps does not store Bomb Bats personal data on a Bernhard Apps
+        server. Local gameplay data can be removed by clearing the app's storage
+        in Android settings or uninstalling the app.
       </p>
       <p>
-        Local gameplay data can be removed by clearing the app's storage in
-        Android settings or uninstalling the app.
+        Data processed by third-party advertising services is handled by those
+        providers according to their own retention and deletion practices.
       </p>
 
       <h2>Changes to this policy</h2>
