@@ -41,7 +41,7 @@ export const apps: AppInfo[] = [
   {
     id: "bombats",
     name: "Bombats",
-    status: "Available",
+    status: "Available on Google Play",
     category: "published",
     summary:
       "A casual Android game from Bernhard Apps.",
