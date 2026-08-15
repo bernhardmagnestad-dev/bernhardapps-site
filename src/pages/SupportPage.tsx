@@ -11,10 +11,11 @@ export function SupportPage() {
     <>
       <section className="section subpage-hero compact">
         <div>
-          <p className="eyebrow">NLP Trainer Support</p>
-          <h1>Support for NLP Trainer</h1>
+          <p className="eyebrow">Bernhard Apps Support</p>
+          <h1>Support for Bernhard Apps</h1>
           <p>
-            Find help, request improvements or report issues about NLP Trainer.
+            Find help, request improvements or report issues for Bernhard Apps
+            products.
           </p>
         </div>
       </section>
